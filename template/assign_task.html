@@ -1,0 +1,2428 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Admiro admin is super flexible, powerful, clean &amp; modern responsive bootstrap 5 admin template with unlimited possibilities.">
+    <meta name="keywords"
+        content="admin template, Admiro admin template, best javascript admin, dashboard template, bootstrap admin template, responsive admin template, web app">
+    <meta name="author" content="pixelstrap">
+    <title>Admiro - Premium Admin Template</title>
+    <!-- Favicon icon-->
+    <link rel="icon" href="../assets/img/favicon.png" type="image/x-icon">
+    <link rel="shortcut icon" href="../assets/img/favicon.png" type="image/x-icon">
+    <!-- Google font-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+    <link
+        href="../../css2?family=Nunito+Sans:opsz,wght@6..12,200;6..12,300;6..12,400;6..12,500;6..12,600;6..12,700;6..12,800;6..12,900;6..12,1000&amp;display=swap"
+        rel="stylesheet">
+    <!-- Flag icon css -->
+    <link rel="stylesheet" href="../assets/css/vendors/flag-icon.css">
+    <!-- iconly-icon-->
+    <link rel="stylesheet" href="../assets/css/iconly-icon.css">
+    <link rel="stylesheet" href="../assets/css/bulk-style.css">
+    <!-- iconly-icon-->
+    <link rel="stylesheet" href="../assets/css/themify.css">
+    <!--fontawesome-->
+    <link rel="stylesheet" href="../assets/css/fontawesome-min.css">
+    <!-- Whether Icon css-->
+    <link rel="stylesheet" type="text/css" href="../assets/css/vendors/weather-icons/weather-icons.min.css">
+    <link rel="stylesheet" type="text/css" href="../assets/css/vendors/scrollbar.css">
+    <link rel="stylesheet" type="text/css" href="../assets/css/vendors/slick.css">
+    <link rel="stylesheet" type="text/css" href="../assets/css/vendors/slick-theme.css">
+    <link rel="stylesheet" type="text/css" href="../assets/css/vendors/datatables.css">
+    <link rel="stylesheet" type="text/css" href="../assets/css/vendors/datatable-extension.css">
+    <!-- App css -->
+    <link id="color" rel="stylesheet" href="../assets/css/color-1.css" media="screen">
+    <link rel="stylesheet" href="../assets/css/style.css">
+
+
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-…(hash)…” crossorigin=" anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-…(hash)…” crossorigin=" anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="stylesheet" href="https://cdn.iconly.io/iconly.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/iconly@latest/css/iconly.css" />
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-KNuNk+LZ8e2j+ozhRtX7sMGu0j1qFeIslMo7k3M5lVZhcN7sVbG7ByAzt+BrgrbM5nxp7/ECYtJ8O5E2+8Y0eA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdn.iconly.io/your-generated-hash/iconly.css">
+
+
+
+
+    <style>
+        /*.dataTables_filter {
+            display: none;
+        }*/ 
+
+        .sidebar-pannle-main {
+            display: none;
+        }
+
+        .margin_left_auto {
+            margin-left: auto;
+        }
+
+        .no-scroll-popup {
+            overflow: visible !important;
+        }
+
+        .swal2-popup {
+            overflow: visible !important;
+        }
+
+        .swal2-html-container {
+            overflow: visible !important;
+            max-height: none !important;
+        }
+
+        #basic-9 {
+            width: auto !important;
+            table-layout: auto;
+        }
+
+        #basic-9 th,
+        #basic-9 td {
+            white-space: nowrap;
+            padding: 8px 12px;
+        }
+
+        #basic-9 {
+            overflow-x: auto;
+            -webkit-overflow-scrolling: touch;
+        }
+
+        /*#basic-9_filter {
+            position: fixed;
+            top: 0;
+            right: 0;
+            background: white;
+            z-index: 1000;
+            padding: 15px;
+            width: auto;
+        }*/
+
+        /* Fix the search/length controls at top 
+        #basic-9_wrapper .dataTables_length,
+        #basic-9_wrapper .dataTables_filter {
+            position: sticky;
+            top: 0;
+            background: white;
+            z-index: 10;
+            padding: 10px 0;
+        }
+
+        .dataTables_info,
+        .dataTables_paginate {
+            position: sticky;
+            bottom: 0;
+            background: white;
+            z-index: 10;
+            padding: 10px 0;
+        }*/
+
+        .card-header {
+            background: #9594f1;
+        }
+
+
+        .filter-container {
+            background: #9594f1;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .filter-row {
+            display: flex;
+            gap: 15px;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .filter-group {
+            flex: 1;
+            min-width: 200px;
+        }
+
+        .filter-group label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+            color: #333;
+        }
+
+        .filter-group select {
+            width: 100%;
+            padding: 8px 12px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 14px;
+            background: white;
+        }
+
+        .filter-group select:disabled {
+            background: #f0f0f0;
+            cursor: not-allowed;
+        }
+
+        .btn-reset {
+            padding: 8px 20px;
+            background: #e40611;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 14px;
+            margin-top: 24px;
+        }
+
+        .btn-reset:hover {
+            background: #da828e;
+        }
+
+        .container {
+            max-width: 100%;
+            margin: 0 auto;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+
+        .header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 20px;
+        }
+
+        .header h1 {
+            margin-bottom: 15px;
+        }
+
+        .filter-section {
+            display: flex;
+            gap: 15px;
+            align-items: flex-end;
+            flex-wrap: wrap;
+        }
+
+        .filter-group {
+            flex: 1;
+            min-width: 200px;
+        }
+
+        .filter-group label {
+            display: block;
+            margin-bottom: 5px;
+            font-size: 14px;
+            opacity: 0.9;
+        }
+
+        .filter-group select {
+            width: 100%;
+            padding: 8px 12px;
+            border: none;
+            border-radius: 4px;
+            font-size: 14px;
+        }
+
+        .btn-reset {
+            padding: 8px 20px;
+            background: white;
+            color: #667eea;
+            border: 2px solid white;
+            border-radius: 4px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: all 0.3s;
+        }
+
+        .btn-reset:hover {
+            background: transparent;
+            color: white;
+        }
+
+        .card-body {
+            padding: 20px;
+        }
+
+        .table-responsive {
+            overflow-x: auto;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 14px;
+        }
+
+        thead {
+            background: #f8f9fa;
+            position: sticky;
+            top: 0;
+            z-index: 10;
+        }
+
+        th {
+            padding: 12px 8px;
+            text-align: left;
+            font-weight: 600;
+            color: #333;
+            border-bottom: 2px solid #dee2e6;
+            white-space: nowrap;
+        }
+
+        td {
+            padding: 10px 8px;
+            border-bottom: 1px solid #f0f0f0;
+        }
+
+        tbody tr {
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+
+        tbody tr:hover {
+            background: #f8f9ff;
+        }
+
+        .no-results {
+            text-align: center;
+            padding: 40px;
+            color: #999;
+            font-size: 16px;
+        }
+
+        .btn {
+            padding: 5px 12px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 12px;
+            margin-right: 5px;
+            transition: all 0.2s;
+        }
+
+        .btn-primary {
+            background: #007bff;
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background: #0056b3;
+        }
+
+        .btn-warning {
+            background: #ffc107;
+            color: #333;
+        }
+
+        .btn-warning:hover {
+            background: #e0a800;
+        }
+
+        .btn-danger {
+            background: #dc3545;
+            color: white;
+        }
+
+        .btn-danger:hover {
+            background: #c82333;
+        }
+
+        /* Modal Styles */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+
+        .modal-content {
+            background-color: #fefefe;
+            margin: 2% auto;
+            border-radius: 8px;
+            width: 90%;
+            max-width: 1200px;
+            max-height: 90vh;
+            overflow-y: auto;
+        }
+
+        .modal-header {
+            padding: 20px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-radius: 8px 8px 0 0;
+        }
+
+        .modal-header h2 {
+            margin: 0;
+        }
+
+        .close {
+            color: white;
+            font-size: 28px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: transform 0.2s;
+        }
+
+        .close:hover {
+            transform: scale(1.2);
+        }
+
+        .modal-body {
+            padding: 20px;
+        }
+
+        /* Row Details Section */
+        .row-details {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 30px;
+            border-left: 4px solid #667eea;
+        }
+
+        .row-details h3 {
+            color: #667eea;
+            margin-bottom: 15px;
+            font-size: 18px;
+        }
+
+        .details-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 15px;
+        }
+
+        .detail-item {
+            background: white;
+            padding: 12px;
+            border-radius: 6px;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+        }
+
+        .detail-label {
+            font-weight: 600;
+            color: #555;
+            font-size: 12px;
+            margin-bottom: 5px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .detail-value {
+            color: #333;
+            font-size: 14px;
+            word-break: break-word;
+        }
+
+        /* Form Styles */
+        .form-section {
+            margin-bottom: 30px;
+            padding: 20px;
+            background: white;
+            border-radius: 8px;
+            border: 1px solid #e0e0e0;
+        }
+
+        .form-section h3 {
+            color: #333;
+            margin-bottom: 15px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #667eea;
+        }
+
+        .form-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 15px;
+        }
+
+        .form-group {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .form-group label {
+            font-weight: 600;
+            margin-bottom: 5px;
+            color: #555;
+            font-size: 14px;
+        }
+
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 14px;
+            transition: border-color 0.3s;
+        }
+
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: #667eea;
+        }
+
+        .form-group textarea {
+            resize: vertical;
+            min-height: 80px;
+        }
+
+        .modal-footer {
+            padding: 20px;
+            background: #f8f9fa;
+            display: flex;
+            justify-content: flex-end;
+            gap: 10px;
+            border-radius: 0 0 8px 8px;
+        }
+
+        .btn-cancel,
+        .btn-save {
+            padding: 10px 25px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: all 0.3s;
+        }
+
+        .btn-cancel {
+            background: #6c757d;
+            color: white;
+        }
+
+        .btn-cancel:hover {
+            background: #5a6268;
+        }
+
+        .btn-save {
+            background: #28a745;
+            color: white;
+        }
+
+        .btn-save:hover {
+            background: #218838;
+        }
+
+        /* Category Section Styles */
+        .category-section {
+            padding: 20px;
+            background: white;
+            border-top: 1px solid #e0e0e0;
+        }
+
+        .category-section h3 {
+            margin-bottom: 15px;
+            color: #333;
+            font-size: 18px;
+        }
+
+        .category-scroll {
+            overflow-x: auto;
+            overflow-y: hidden;
+            scrollbar-width: thin;
+            scrollbar-color: #667eea #f0f0f0;
+        }
+
+        .category-scroll::-webkit-scrollbar {
+            height: 8px;
+        }
+
+        .category-scroll::-webkit-scrollbar-track {
+            background: #f0f0f0;
+            border-radius: 4px;
+        }
+
+        .category-scroll::-webkit-scrollbar-thumb {
+            background: #667eea;
+            border-radius: 4px;
+        }
+
+        .category-scroll::-webkit-scrollbar-thumb:hover {
+            background: #5568d3;
+        }
+
+        .category-grid {
+            display: flex;
+            gap: 15px;
+            padding-bottom: 10px;
+        }
+
+        .category-card {
+            min-width: 200px;
+            flex-shrink: 0;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.2s, box-shadow 0.2s;
+            cursor: pointer;
+        }
+
+        .category-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(102, 126, 234, 0.3);
+        }
+
+        .category-code {
+            font-size: 18px;
+            font-weight: 700;
+            margin-bottom: 8px;
+            letter-spacing: 1px;
+        }
+
+        .category-desc {
+            font-size: 13px;
+            line-height: 1.4;
+            opacity: 0.95;
+        }
+    </style>
+
+</head>
+
+
+
+
+
+<body>
+    <!-- page-wrapper Start-->
+    <!-- tap on top starts-->
+    <div class="tap-top">
+        <i class="fa-solid fa-angle-up"></i>
+    </div>
+    <!-- tap on tap ends-->
+    <!-- loader-->
+    <div class="loader-wrapper">
+        <div class="loader"><span></span><span></span><span></span><span></span><span></span></div>
+    </div>
+
+
+    <div class="page-wrapper compact-wrapper" id="pageWrapper">
+
+        <!-- this is header section -->
+        <header class="page-header row">
+            <div class="logo-wrapper d-flex align-items-right col-auto"><a href="index.html"><img
+                        class="light-logo img-fluid" src="../assets/img/logo.png" alt="logo"><img
+                        class="dark-logo img-fluid" src="../assets/img/logo.png" alt="logo"></a><a
+                    class="close-btn toggle-sidebar" href="javascript:void(0)">
+                    <svg class="svg-color">
+                        <use href="../assets/svg/iconly-sprite.svg#Category"></use>
+                    </svg></a></div>
+            <div class="page-main-header col">
+                <div class="header-left">
+                    <form class="form-inline search-full col" action="#" method="get">
+                        <div class="form-group w-100">
+                            <div class="Typeahead Typeahead--twitterUsers">
+                                <div class="u-posRelative">
+                                    <input class="demo-input Typeahead-input form-control-plaintext w-100" type="text"
+                                        placeholder="Search Admiro .." name="q" title="" autofocus="autofocus">
+                                    <div class="spinner-border Typeahead-spinner" role="status"><span
+                                            class="sr-only">Loading...</span>
+                                    </div><i class="close-search" data-feather="x"></i>
+                                </div>
+                                <div class="Typeahead-menu"></div>
+                            </div>
+                        </div>
+                    </form>
+
+                    <!-- <div class="form-group-header d-lg-block d-none">
+            <div class="Typeahead Typeahead--twitterUsers">
+              <div class="u-posRelative d-flex align-items-center">
+                <input class="demo-input py-0 Typeahead-input form-control-plaintext w-100" type="text"
+                  placeholder="Type to Search..." name="q" title=""><i class="search-bg iconly-Search icli"></i>
+              </div>
+            </div>
+          </div> -->
+
+                </div>
+                <div class="nav-right">
+                    <ul class="header-right">
+                        <li class="search d-lg-none d-flex"> <a href="javascript:void(0)">
+                                <svg>
+                                    <use href="../assets/svg/iconly-sprite.svg#Search"></use>
+                                </svg></a></li>
+                        <li> <a class="dark-mode" href="javascript:void(0)">
+                                <svg>
+                                    <use href="../assets/svg/iconly-sprite.svg#moondark"></use>
+                                </svg></a></li>
+
+                        <li class="custom-dropdown"><a href="javascript:void(0)">
+                                <svg>
+                                    <use href="../assets/svg/iconly-sprite.svg#notification"></use>
+                                </svg></a><span class="badge rounded-pill badge-primary">4</span>
+                            <div class="custom-menu notification-dropdown py-0 overflow-hidden">
+                                <h3 class="title bg-primary-light dropdown-title">Notification <span
+                                        class="font-primary">View
+                                        all</span></h3>
+                                <ul class="activity-timeline">
+                                    <li class="d-flex align-items-start">
+                                        <div class="activity-line"></div>
+                                        <div class="activity-dot-primary"></div>
+                                        <div class="flex-grow-1">
+                                            <h6 class="f-w-600 font-primary">30-04-2024<span>Today</span><span
+                                                    class="circle-dot-primary float-end">
+                                                    <svg class="circle-color">
+                                                        <use href="../assets/svg/iconly-sprite.svg#circle"></use>
+                                                    </svg></span></h6>
+                                            <h5>Alice Goodwin</h5>
+                                            <p class="mb-0">Fashion should be fun. It shouldn't be labelled
+                                                intellectual.</p>
+                                        </div>
+                                    </li>
+                                    <li class="d-flex align-items-start">
+                                        <div class="activity-dot-secondary"></div>
+                                        <div class="flex-grow-1">
+                                            <h6 class="f-w-600 font-secondary">28-06-2024<span>1 hour ago</span><span
+                                                    class="float-end circle-dot-secondary">
+                                                    <svg class="circle-color">
+                                                        <use href="../assets/svg/iconly-sprite.svg#circle"></use>
+                                                    </svg></span></h6>
+                                            <h5>Herry Venter</h5>
+                                            <p>I am convinced that there can be luxury in simplicity.</p>
+                                        </div>
+                                    </li>
+                                    <li class="d-flex align-items-start">
+                                        <div class="activity-dot-primary"></div>
+                                        <div class="flex-grow-1">
+                                            <h6 class="f-w-600 font-primary">04-08-2024<span>Today</span><span
+                                                    class="float-end circle-dot-primary">
+                                                    <svg class="circle-color">
+                                                        <use href="../assets/svg/iconly-sprite.svg#circle"></use>
+                                                    </svg></span></h6>
+                                            <h5>Loain Deo</h5>
+                                            <p>I feel that things happen for open new opportunities.</p>
+                                        </div>
+                                    </li>
+                                    <li class="d-flex align-items-start">
+                                        <div class="activity-dot-secondary"></div>
+                                        <div class="flex-grow-1">
+                                            <h6 class="f-w-600 font-secondary">12-11-2024<span>Yesterday</span><span
+                                                    class="float-end circle-dot-secondary">
+                                                    <svg class="circle-color">
+                                                        <use href="../assets/svg/iconly-sprite.svg#circle"></use>
+                                                    </svg></span></h6>
+                                            <h5>Fenter Jessy</h5>
+                                            <p>Sometimes the simplest things are the most profound.</p>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        </li>
+
+                        <li class="profile-nav custom-dropdown">
+                            <div class="user-wrap">
+                                <div class="user-img"><img src="../assets/images/profile.png" alt="user"></div>
+                                <div class="user-content">
+                                    <h6>Manas Moharana</h6>
+                                    <p class="mb-0">Admin<i class="fa-solid fa-chevron-down"></i></p>
+                                </div>
+                            </div>
+                            <div class="custom-menu overflow-hidden">
+                                <ul class="profile-body">
+                                    <li class="d-flex">
+                                        <svg class="svg-color">
+                                            <use href="../assets/svg/iconly-sprite.svg#Profile"></use>
+                                        </svg><a class="ms-2" href="user-profile.html">Account</a>
+                                    </li>
+                                    <li class="d-flex">
+                                        <svg class="svg-color">
+                                            <use href="../assets/svg/iconly-sprite.svg#Message"></use>
+                                        </svg><a class="ms-2" href="letter-box.html">Inbox</a>
+                                    </li>
+                                    <li class="d-flex">
+                                        <svg class="svg-color">
+                                            <use href="../assets/svg/iconly-sprite.svg#Document"></use>
+                                        </svg><a class="ms-2" href="to-do.html">Task</a>
+                                    </li>
+                                    <li class="d-flex">
+                                        <svg class="svg-color">
+                                            <use href="../assets/svg/iconly-sprite.svg#Login"></use>
+                                        </svg><a class="ms-2" href="login.html">Log Out</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </header>
+        <!--header section end -->
+
+
+
+
+
+        <!-- Page Body Start-->
+        <div class="page-body-wrapper">
+            <!-- Page sidebar start-->
+            <aside class="page-sidebar">
+                <div class="left-arrow" id="left-arrow"><i data-feather="arrow-left"></i></div>
+                <div class="main-sidebar" id="main-sidebar">
+                    <ul class="sidebar-menu" id="simple-bar">
+                        <li class="pin-title sidebar-main-title">
+                            <div>
+                                <h5 class="sidebar-title f-w-700">Pinned</h5>
+                            </div>
+                        </li>
+                        <li class="sidebar-main-title">
+                            <div>
+                                <h5 class="lan-1 f-w-700 sidebar-title">General</h5>
+                            </div>
+                        </li>
+                        <li class="sidebar-list">
+                            <!-- <i class="fa-solid fa-thumbtack"></i> -->
+                            <a class="sidebar-link" href="dashboard.html">
+                                <svg class="stroke-icon">
+                                    <use href="../assets/svg/iconly-sprite.svg#Home-dashboard"></use>
+                                </svg>
+                                <h6>Dashboards</h6>
+                            </a>
+                        </li>
+                        <li class="sidebar-list">
+                            <a class="sidebar-link" href="javascript:void(0)">
+                                <svg class="stroke-icon">
+                                    <use href="../assets/svg/iconly-sprite.svg#User-sidebar"></use>
+                                </svg>
+                                <h6>User</h6>
+                                <i class="fa-solid fa-chevron-right margin_left_auto"></i>
+                            </a>
+                            <ul class="sidebar-submenu">
+                                <li> <a href="telecaller.html">Telecaller</a></li>
+                                <li><a href="teamlead.html">Team lead</a></li>
+                                <li><a href="ground_staff.html">Ground staff</a></li>
+                            </ul>
+                        </li>
+
+                        <li class="sidebar-list"><a class="sidebar-link" href="create_user.html">
+                                <svg class="stroke-icon">
+                                    <use href="../assets/svg/iconly-sprite.svg#Profile"></use>
+                                </svg>
+                                <h6 class="f-w-600">Create Users</h6>
+                            </a>
+
+                        </li>
+
+                        <li class="sidebar-list">
+                            <!-- <i class="fa-solid fa-thumbtack"></i> -->
+                            <a class="sidebar-link" href="create_user.html">
+                                <svg class="stroke-icon">
+                                    <use href="../assets/svg/iconly-sprite.svg#Home-dashboard"></use>
+                                </svg>
+                                <h6>Create User</h6>
+                            </a>
+                        </li>
+                        <li class="sidebar-list">
+                            <!-- <i class="fa-solid fa-thumbtack"></i> -->
+                            <a class="sidebar-link" href="javascript:void(0)">
+                                <svg class="stroke-icon">
+                                    <use href="../assets/svg/iconly-sprite.svg#Document"></use>
+                                </svg>
+                                <h6>Login Status</h6>
+                                <i class="fa-solid fa-chevron-right margin_left_auto"></i>
+                            </a>
+                            <ul class="sidebar-submenu">
+                                <li> <a href="tc_login.html">Telecaller</a></li>
+                                <li><a href="tl_login.html">Team lead</a></li>
+                                <li> <a href="gs_login.html">Ground staff</a></li>
+                            </ul>
+                        </li>
+
+                        <li class="sidebar-list">
+                            <!-- <i class="fa-solid fa-thumbtack"></i> -->
+                            <a class="sidebar-link" href="create_task.html">
+                                <svg class="stroke-icon">
+                                    <use href="../assets/svg/iconly-sprite.svg#Message"></use>
+                                </svg>
+                                <h6 class="f-w-600">Create Task</h6>
+                            </a>
+                        </li>
+
+
+                        <li class="sidebar-list">
+                            <!-- <i class="fa-solid fa-thumbtack"></i> -->
+                            <a class="sidebar-link" href="javascript:void(0)">
+                                <svg class="stroke-icon">
+                                    <use href="../assets/svg/iconly-sprite.svg#Bookmark"></use>
+                                </svg>
+                                <h6 class="f-w-600">Task List</h6>
+                            </a>
+                        </li>
+
+                        <li class="sidebar-list">
+                            <!-- <i class="fa-solid fa-thumbtack"></i> -->
+                            <a class="sidebar-link" href="javascript:void(0)">
+                                <svg class="stroke-icon">
+                                    <use href="../assets/svg/iconly-sprite.svg#Info-circle"></use>
+                                </svg>
+                                <h6 class="f-w-600">All Tasks</h6>
+                                <i class="fa-solid fa-chevron-right margin_left_auto"></i>
+                            </a>
+                            <ul class="sidebar-submenu">
+                                <li> <a href="pending_task.html">Pending</a></li>
+                                <li> <a href="complete_task.html">Completed</a></li>
+                            </ul>
+                        </li>
+
+
+                        <li class="sidebar-list">
+                            <!-- <i class="fa-solid fa-thumbtack"></i> -->
+                            <a class="sidebar-link" href="leave.html">
+                                <svg class="stroke-icon">
+                                    <use href="../assets/svg/iconly-sprite.svg#Bookmark"></use>
+                                </svg>
+                                <h6 class="f-w-600">Leave Request</h6>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="right-arrow" id="right-arrow"><i data-feather="arrow-right"></i></div>
+            </aside>
+            <!-- Page sidebar end-->
+
+            <!-- body section start  -->
+            <div class="page-body">
+                <div class="container-fluid">
+                    <div class="page-title">
+                        <div class="row">
+                            <!-- table start -->
+                            <div class="col-sm-12">
+                                <div class="card">
+                                    <div class="card-header pb-0 card-no-border">
+
+                                        <h3>MY TASK LIST</h3>
+
+
+
+                                    </div>
+                                    <div class="filter-container">
+                                        <div class="filter-row">
+                                            <div class="filter-group">
+                                                <label for="columnSelect">Select Column:</label>
+                                                <select id="columnSelect">
+                                                    <option value="">-- Select Column --</option>
+                                                </select>
+                                            </div>
+                                            <div class="filter-group">
+                                                <label for="valueSelect">Select Value:</label>
+                                                <select id="valueSelect" disabled>
+                                                    <option value="">-- Select Value --</option>
+                                                </select>
+                                            </div>
+                                            <button class="btn-reset" onclick="resetFilters()">Reset Filters</button>
+                                        </div>
+                                    </div>
+
+                                    <!-- Category Section -->
+                                    <div class="category-section">
+                                        <h3>Status Categories</h3>
+                                        <div class="category-scroll">
+                                            <div class="category-grid">
+                                                <div class="category-card">
+                                                    <div class="category-code">CB</div>
+                                                    <div class="category-desc">The customer asked us to call back</div>
+                                                </div>
+                                                <div class="category-card">
+                                                    <div class="category-code">DISP</div>
+                                                    <div class="category-desc">Disputed cases</div>
+                                                </div>
+                                                <div class="category-card">
+                                                    <div class="category-code">EXP</div>
+                                                    <div class="category-desc">Death</div>
+                                                </div>
+                                                <div class="category-card">
+                                                    <div class="category-code">NC</div>
+                                                    <div class="category-desc">Not contact/Invalid/Incoming call off
+                                                    </div>
+                                                </div>
+                                                <div class="category-card">
+                                                    <div class="category-code">NITP</div>
+                                                    <div class="category-desc">Customer having no intension to repay
+                                                        loans / Intentional issues</div>
+                                                </div>
+                                                <div class="category-card">
+                                                    <div class="category-code">OS</div>
+                                                    <div class="category-desc">Out of station</div>
+                                                </div>
+                                                <div class="category-card">
+                                                    <div class="category-code">PAID</div>
+                                                    <div class="category-desc">Paid</div>
+                                                </div>
+                                                <div class="category-card">
+                                                    <div class="category-code">PTP</div>
+                                                    <div class="category-desc">Promised to pay</div>
+                                                </div>
+                                                <div class="category-card">
+                                                    <div class="category-code">REPO</div>
+                                                    <div class="category-desc">Vehicle repossession</div>
+                                                </div>
+                                                <div class="category-card">
+                                                    <div class="category-code">RNR</div>
+                                                    <div class="category-desc">Customer not responding the call</div>
+                                                </div>
+                                                <div class="category-card">
+                                                    <div class="category-code">RTP</div>
+                                                    <div class="category-desc">Refused to pay</div>
+                                                </div>
+                                                <div class="category-card">
+                                                    <div class="category-code">SHIFT</div>
+                                                    <div class="category-desc">Shifted the address</div>
+                                                </div>
+                                                <div class="category-card">
+                                                    <div class="category-code">SKIP</div>
+                                                    <div class="category-desc">Skip the address</div>
+                                                </div>
+                                                <div class="category-card">
+                                                    <div class="category-code">VISIT</div>
+                                                    <div class="category-desc">Not visit</div>
+                                                </div>
+                                                <div class="category-card">
+                                                    <div class="category-code">RE-VISIT</div>
+                                                    <div class="category-desc">Need to group visit</div>
+                                                </div>
+                                                <div class="category-card">
+                                                    <div class="category-code">WIP</div>
+                                                    <div class="category-desc">Working progress</div>
+                                                </div>
+                                                <div class="category-card">
+                                                    <div class="category-code">N-OFF</div>
+                                                    <div class="category-desc">Number off</div>
+                                                </div>
+                                                <div class="category-card">
+                                                    <div class="category-code">ANF</div>
+                                                    <div class="category-desc">Address not found</div>
+                                                </div>
+                                                <div class="category-card">
+                                                    <div class="category-code">FRAUD</div>
+                                                    <div class="category-desc">Potential fraud</div>
+                                                </div>
+                                                <div class="category-card">
+                                                    <div class="category-code">PS</div>
+                                                    <div class="category-desc">Product sold</div>
+                                                </div>
+                                                <div class="category-card">
+                                                    <div class="category-code">CF</div>
+                                                    <div class="category-desc">Cash funding</div>
+                                                </div>
+                                                <div class="category-card">
+                                                    <div class="category-code">FP</div>
+                                                    <div class="category-desc">Financial problem</div>
+                                                </div>
+                                                <div class="category-card">
+                                                    <div class="category-code">WS</div>
+                                                    <div class="category-desc">Wants settlement</div>
+                                                </div>
+                                                <div class="category-card">
+                                                    <div class="category-code">NO JOB</div>
+                                                    <div class="category-desc">Jobless</div>
+                                                </div>
+                                                <div class="category-card">
+                                                    <div class="category-code">MP</div>
+                                                    <div class="category-desc">Medical problems</div>
+                                                </div>
+                                                <div class="category-card">
+                                                    <div class="category-code">MD</div>
+                                                    <div class="category-desc">Multiple loan availed & market defaulter
+                                                    </div>
+                                                </div>
+                                                <div class="category-card">
+                                                    <div class="category-code">IC</div>
+                                                    <div class="category-desc">Insurance claim</div>
+                                                </div>
+                                                <div class="category-card">
+                                                    <div class="category-code">3P</div>
+                                                    <div class="category-desc">3rd party case</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="card-body">
+                                        <div class="table-responsive">
+                                            <table class="display dataTable" id="basic-9">
+                                                <thead style="background:#f8f9fa;">
+                                                    <tr>
+                                                        <th>Sl</th>
+                                                        <th>Agreement ID</th>
+                                                        <th>Customer Name</th>
+                                                        <th>Product</th>
+                                                        <th>TC Name</th>
+                                                        <th>Branch</th>
+                                                        <th>Count of Cases</th>
+                                                        <th>Old/New</th>
+                                                        <th>Bucket</th>
+                                                        <th>Mode</th>
+                                                        <th>NPA Status</th>
+                                                        <th>POS</th>
+                                                        <th>EMI Amount</th>
+                                                        <th>EMI Due Amount</th>
+                                                        <th>Total Charges</th>
+                                                        <th>Receipt Amount</th>
+                                                        <th>Receipt Date</th>
+                                                        <th>BCC Pending</th>
+                                                        <th>Penal Pending</th>
+                                                        <th>Disbursement Amount</th>
+                                                        <th>Loan Amount</th>
+                                                        <th>Disbursement Date</th>
+                                                        <th>EMI Start Date</th>
+                                                        <th>EMI End Date</th>
+                                                        <th>EMI Cycle Date</th>
+                                                        <th>Make</th>
+                                                        <th>Manufacturer Description</th>
+                                                        <th>Registration Number</th>
+                                                        <th>Age</th>
+                                                        <th>Employer</th>
+                                                        <th>Father Name</th>
+                                                        <th>FE Name</th>
+                                                        <th>FE Mobile Number</th>
+                                                        <th>Customer Number</th>
+                                                        <th>Customer Address</th>
+                                                        <th>Customer Office Address</th>
+                                                        <th>PIN Code</th>
+                                                        <th>Reference Details</th>
+                                                        <th>Collection Manager Name</th>
+                                                        <th>Finance Company Name</th>
+                                                        <th>Action</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody id="table-body"></tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+
+                                    <!-- Modal -->
+                                    <div id="detailModal" class="modal">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <h2>Case Details & Update</h2>
+                                                <span class="close" onclick="closeModal()">&times;</span>
+                                            </div>
+                                            <div class="modal-body">
+                                                <!-- Row Details Section -->
+                                                <div class="row-details" id="rowDetailsSection">
+                                                    <h3>Current Case Information</h3>
+                                                    <div class="details-grid" id="rowDetailsGrid">
+                                                        <!-- Details will be populated here -->
+                                                    </div>
+                                                </div>
+
+                                                <!-- Form Section -->
+                                                <form id="detailForm">
+                                                    <div class="form-section">
+                                                        <h3>Contact Information</h3>
+                                                        <div class="form-grid">
+                                                            <div class="form-group">
+                                                                <label>Code</label>
+                                                                <select id="code">
+                                                                    <option value="">Select Code</option>
+                                                                    <option value="C1">Code 1</option>
+                                                                    <option value="C2">Code 2</option>
+                                                                    <option value="C3">Code 3</option>
+                                                                </select>
+                                                            </div>
+                                                            <div class="form-group">
+                                                                <label>New Mobile Number</label>
+                                                                <input type="tel" id="newMobileNumber"
+                                                                    placeholder="Enter mobile number">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="form-section">
+                                                        <h3>Projection Details</h3>
+                                                        <div class="form-grid">
+                                                            <div class="form-group">
+                                                                <label>Projection (Y/D/N)</label>
+                                                                <select id="projection">
+                                                                    <option value="">Select</option>
+                                                                    <option value="Y">Yes</option>
+                                                                    <option value="D">Delayed</option>
+                                                                    <option value="N">No</option>
+                                                                </select>
+                                                            </div>
+                                                            <div class="form-group">
+                                                                <label>Promise Date</label>
+                                                                <input type="datetime-local" id="promiseDate">
+                                                            </div>
+                                                            <div class="form-group">
+                                                                <label>Promise Amount</label>
+                                                                <input type="number" id="promiseAmount"
+                                                                    placeholder="00000/-">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="form-section">
+                                                        <h3>Remarks</h3>
+                                                        <div class="form-grid">
+                                                            <div class="form-group">
+                                                                <label>Customer Remarks</label>
+                                                                <textarea id="customerRemarks"
+                                                                    placeholder="Enter customer remarks"></textarea>
+                                                            </div>
+                                                            <div class="form-group">
+                                                                <label>Reference Remarks</label>
+                                                                <textarea id="referenceRemarks"
+                                                                    placeholder="Enter reference remarks"></textarea>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="form-section">
+                                                        <h3>Visit Details</h3>
+                                                        <div class="form-grid">
+                                                            <div class="form-group">
+                                                                <label>Need Group Visit (Y/N)</label>
+                                                                <select id="needGroupVisit">
+                                                                    <option value="">Select</option>
+                                                                    <option value="Y">Yes</option>
+                                                                    <option value="N">No</option>
+                                                                </select>
+                                                            </div>
+                                                            <div class="form-group">
+                                                                <label>Projection (Y/Y2/Y3/D/N)</label>
+                                                                <select id="projectionExtended">
+                                                                    <option value="">Select</option>
+                                                                    <option value="Y">Yes</option>
+                                                                    <option value="Y2">Yes 2</option>
+                                                                    <option value="Y3">Yes 3</option>
+                                                                    <option value="D">Delayed</option>
+                                                                    <option value="N">No</option>
+                                                                </select>
+                                                            </div>
+                                                            <div class="form-group">
+                                                                <label>Visit Status (Y/N)</label>
+                                                                <select id="visitStatus">
+                                                                    <option value="">Select</option>
+                                                                    <option value="Y">Yes</option>
+                                                                    <option value="N">No</option>
+                                                                </select>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="form-section">
+                                                        <h3>Customer & Vehicle Status</h3>
+                                                        <div class="form-grid">
+                                                            <div class="form-group">
+                                                                <label>Customer Available (Y/N)</label>
+                                                                <select id="customerAvailable">
+                                                                    <option value="">Select</option>
+                                                                    <option value="Y">Yes</option>
+                                                                    <option value="N">No</option>
+                                                                </select>
+                                                            </div>
+                                                            <div class="form-group">
+                                                                <label>Vehicle Available (Y/N)</label>
+                                                                <select id="vehicleAvailable">
+                                                                    <option value="">Select</option>
+                                                                    <option value="Y">Yes</option>
+                                                                    <option value="N">No</option>
+                                                                </select>
+                                                            </div>
+                                                            <div class="form-group">
+                                                                <label>3rd Party Status (Y/N)</label>
+                                                                <select id="thirdPartyStatus">
+                                                                    <option value="">Select</option>
+                                                                    <option value="Y">Yes</option>
+                                                                    <option value="N">No</option>
+                                                                </select>
+                                                            </div>
+                                                            <div class="form-group">
+                                                                <label>3rd Party Details</label>
+                                                                <input type="text" id="thirdPartyDetails"
+                                                                    placeholder="Enter details">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="form-section">
+                                                        <h3>Location & Status</h3>
+                                                        <div class="form-grid">
+                                                            <div class="form-group">
+                                                                <label>New Update Address</label>
+                                                                <textarea id="newUpdateAddress"
+                                                                    placeholder="Enter new address"></textarea>
+                                                            </div>
+                                                            <div class="form-group">
+                                                                <label>Location Photo</label>
+                                                                <input type="file" id="locationPhoto" accept="image/*">
+                                                            </div>
+                                                            <div class="form-group">
+                                                                <label>Status (ST/RB/NR/RF)</label>
+                                                                <select id="status">
+                                                                    <option value="">Select</option>
+                                                                    <option value="ST">ST</option>
+                                                                    <option value="RB">RB</option>
+                                                                    <option value="NR">NR</option>
+                                                                    <option value="RF">RF</option>
+                                                                </select>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="form-section">
+                                                        <h3>Payment Details</h3>
+                                                        <div class="form-grid">
+                                                            <div class="form-group">
+                                                                <label>Payment</label>
+                                                                <input type="text" id="payment"
+                                                                    placeholder="Enter payment info">
+                                                            </div>
+                                                            <div class="form-group">
+                                                                <label>Mode (Cash/Online)</label>
+                                                                <select id="paymentMode">
+                                                                    <option value="">Select</option>
+                                                                    <option value="Cash">Cash</option>
+                                                                    <option value="Online">Online</option>
+                                                                </select>
+                                                            </div>
+                                                            <div class="form-group">
+                                                                <label>Payment Amount</label>
+                                                                <input type="number" id="paymentAmount"
+                                                                    placeholder="00000/-">
+                                                            </div>
+                                                            <div class="form-group">
+                                                                <label>Payment Date</label>
+                                                                <input type="datetime-local" id="paymentDate">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </form>
+                                            </div>
+                                            <div class="modal-footer">
+                                                <button class="btn-cancel" onclick="closeModal()">Cancel</button>
+                                                <button class="btn-save" onclick="saveDetails()">Save Changes</button>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Container-fluid starts-->
+            <footer class="footer">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-md-6 footer-copyright">
+                            <p class="mb-0">Copyright 2024 © Admiro theme by pixelstrap.</p>
+                        </div>
+                        <div class="col-md-6">
+                            <p class="float-end mb-0">Hand crafted &amp; made with
+                                <svg class="svg-color footer-icon">
+                                    <use href="../assets/svg/iconly-sprite.svg#heart"></use>
+                                </svg>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+        </div>
+        <!-- page body end  -->
+
+    </div>
+
+
+
+
+    <!-- jquery-->
+    <script src="../assets/js/vendors/jquery/jquery.min.js"></script>
+    <!-- bootstrap js-->
+    <script src="../assets/js/vendors/bootstrap/dist/js/bootstrap.bundle.min.js" defer=""></script>
+    <script src="../assets/js/vendors/bootstrap/dist/js/popper.min.js" defer=""></script>
+    <!--fontawesome-->
+    <script src="../assets/js/vendors/font-awesome/fontawesome-min.js"></script>
+    <!-- feather-->
+    <script src="../assets/js/vendors/feather-icon/feather.min.js"></script>
+    <script src="../assets/js/vendors/feather-icon/custom-script.js"></script>
+    <!-- sidebar -->
+    <script src="../assets/js/sidebar.js"></script>
+    <!-- sweet aleart  -->
+    <script src="../assets/js/sweetalert/sweetalert2.min.js"></script>
+    <script src="../assets/js/sweetalert/sweetalert-custom.js"></script>
+    <!-- height_equal-->
+    <script src="../assets/js/height-equal.js"></script>
+    <!-- config-->
+    <script src="../assets/js/config.js"></script>
+    <!-- apex-->
+    <script src="../assets/js/chart/apex-chart/apex-chart.js"></script>
+    <script src="../assets/js/chart/apex-chart/stock-prices.js"></script>
+    <!-- scrollbar-->
+    <script src="../assets/js/scrollbar/simplebar.js"></script>
+    <script src="../assets/js/scrollbar/custom.js"></script>
+    <!-- slick-->
+    <script src="../assets/js/slick/slick.min.js"></script>
+    <script src="../assets/js/slick/slick.js"></script>
+    <!-- data_table-->
+    <script src="../assets/js/js-datatables/datatables/jquery.dataTables.min.js"></script>
+    <!-- page_datatable-->
+    <script src="../assets/js/js-datatables/datatables/datatable.custom.js"></script>
+    <!-- page_datatable1-->
+    <script src="../assets/js/js-datatables/datatables/datatable.custom1.js"></script>
+    <!-- page_datatable-->
+    <script src="../assets/js/datatable/datatables/datatable.custom.js"></script>
+    <!-- theme_customizer-->
+    <script src="../assets/js/theme-customizer/customizer.js"></script>
+    <!-- tilt-->
+    <script src="../assets/js/animation/tilt/tilt.jquery.js"></script>
+    <!-- page_tilt-->
+    <script src="../assets/js/animation/tilt/tilt-custom.js"></script>
+    <!-- dashboard_1-->
+    <script src="../assets/js/dashboard/dashboard_1.js"></script>
+
+
+
+
+
+
+    <!-- slick-->
+    <script src="../assets/js/slick/slick.min.js"></script>
+    <script src="../assets/js/slick/slick.js"></script>
+    <!-- datatable-->
+    <script src="../assets/js/datatable/datatables/jquery.dataTables.min.js"></script>
+    <!-- datatable_extension-->
+    <script src="../assets/js/datatable/datatable-extension/dataTables.buttons.min.js"></script>
+    <script src="../assets/js/datatable/datatable-extension/jszip.min.js"></script>
+    <script src="../assets/js/datatable/datatable-extension/buttons.colVis.min.js"></script>
+    <script src="../assets/js/datatable/datatable-extension/pdfmake.min.js"></script>
+    <script src="../assets/js/datatable/datatable-extension/vfs_fonts.js"></script>
+    <script src="../assets/js/datatable/datatable-extension/dataTables.autoFill.min.js"></script>
+    <script src="../assets/js/datatable/datatable-extension/dataTables.select.min.js"></script>
+    <script src="../assets/js/datatable/datatable-extension/buttons.bootstrap4.min.js"></script>
+    <script src="../assets/js/datatable/datatable-extension/buttons.html5.min.js"></script>
+    <script src="../assets/js/datatable/datatable-extension/buttons.print.min.js"></script>
+    <script src="../assets/js/datatable/datatable-extension/dataTables.bootstrap4.min.js"></script>
+    <script src="../assets/js/datatable/datatable-extension/dataTables.responsive.min.js"></script>
+    <script src="../assets/js/datatable/datatable-extension/responsive.bootstrap4.min.js"></script>
+    <script src="../assets/js/datatable/datatable-extension/dataTables.keyTable.min.js"></script>
+    <script src="../assets/js/datatable/datatable-extension/dataTables.colReorder.min.js"></script>
+    <script src="../assets/js/datatable/datatable-extension/dataTables.fixedHeader.min.js"></script>
+    <script src="../assets/js/datatable/datatable-extension/dataTables.rowReorder.min.js"></script>
+    <script src="../assets/js/datatable/datatable-extension/dataTables.scroller.min.js"></script>
+    <script src="../assets/js/datatable/datatable-extension/custom.js"></script>
+
+    <!-- datatable-->
+    <script src="../assets/js/datatable/datatables/jquery.dataTables.min.js"></script>
+    <!-- page_datatable -->
+    <script src="../assets/js/js-datatables/datatables/datatable.custom.js"></script>
+    <!-- page_datatable-->
+    <!-- <script src="../assets/js/datatable/datatables/datatable.custom.js"></script> -->
+    <!-- theme_customizer-->
+    <script src="../assets/js/theme-customizer/customizer.js"></script>
+
+    <!-- custom script -->
+    <script src="../assets/js/script.js"></script>
+
+
+
+
+
+
+    <script>
+
+
+        const tasks = [
+            {
+                sl: 1,
+                agreementId: "118354371",
+                customerName: "BIMAL SAMANTARAY",
+                prod: "TR",
+                tcName: "SINU",
+                branch: "RASULGARH",
+                countOfCases: 2,
+                oldNew: "NEW",
+                bucket: 3,
+                mode: "RF",
+                npaStatus: "GCL",
+                pos: "434798.55",
+                emiAmt: "14750",
+                emiDueAmount: "12000",
+                totalCharges: "15032",
+                receiptAmount: "14750",
+                receiptDate: "10/12/2025",
+                bccPending: "9722",
+                penalPending: "5310",
+                disbAmt: "612265",
+                loanAmt: "620000",
+                disbDate: "28/06/2023",
+                emiStartDate: "05/08/2023",
+                emiEndDate: "05/07/2028",
+                emiCycleDate: "5",
+                make: "MAHINDRA",
+                manufacturerDesc: "MAHINDRA & MAHINDRA LTD.",
+                regdnum: "OD33AK1032",
+                age: "33",
+                employer: "TATA CAPITAL",
+                fatherName: "PROMOD SAMANTARAY",
+                feName: "RAMA",
+                feMobileNumber: "9999999999",
+                customerNumber: "8888888888",
+                customerAddress: "AT-HARIRAJPUR, HARIRAJPUR, HARIRAJPUR, PURI,KHORDA,752050",
+                customerOfficeAddress: "Biswanathpur BRAHMANAPADA G P BISWANATHPUR Puri",
+                pinCode: "752050",
+                referenceDetails: "BABULI JENA-7008474630,GUJURI CHAMPATY-7008707394",
+                collectionManagerName: "RAKESH KUMAR MOHANTY",
+                financeCompanyName: "IDFC FIRST BANK"
+            },
+            {
+                sl: 2,
+                agreementId: "118765432",
+                customerName: "PRIYA KRISHNAN",
+                prod: "CV",
+                tcName: "ARJUN",
+                branch: "PATIA",
+                countOfCases: 1,
+                oldNew: "OLD",
+                bucket: 2,
+                mode: "ECS",
+                npaStatus: "STD",
+                pos: "385420.75",
+                emiAmt: "12500",
+                emiDueAmount: "25000",
+                totalCharges: "13250",
+                receiptAmount: "12500",
+                receiptDate: "15/12/2025",
+                bccPending: "8500",
+                penalPending: "4200",
+                disbAmt: "450000",
+                loanAmt: "450000",
+                disbDate: "15/04/2022",
+                emiStartDate: "15/05/2022",
+                emiEndDate: "15/04/2027",
+                emiCycleDate: "15",
+                make: "TATA",
+                manufacturerDesc: "TATA MOTORS LIMITED",
+                regdnum: "OD05BK5678",
+                age: "29",
+                employer: "INFOSYS",
+                fatherName: "K SUBRAMANIAM",
+                feName: "LAKSHMI",
+                feMobileNumber: "9876543210",
+                customerNumber: "9123456789",
+                customerAddress: "PLOT NO 45, PATIA, BHUBANESWAR, KHORDA,751024",
+                customerOfficeAddress: "Infosys Campus, Chandrasekharpur, Bhubaneswar",
+                pinCode: "751024",
+                referenceDetails: "RAVI KUMAR-9876543211,ANITA PATEL-9876543212",
+                collectionManagerName: "SURESH PANDA",
+                financeCompanyName: "HDFC BANK"
+            },
+            {
+                sl: 3,
+                agreementId: "119234567",
+                customerName: "AMIT KUMAR SINGH",
+                prod: "PV",
+                tcName: "MEERA",
+                branch: "CUTTACK",
+                countOfCases: 3,
+                oldNew: "NEW",
+                bucket: 4,
+                mode: "CH",
+                npaStatus: "SMA1",
+                pos: "567890.25",
+                emiAmt: "18900",
+                emiDueAmount: "37800",
+                totalCharges: "22450",
+                receiptAmount: "18900",
+                receiptDate: "08/12/2025",
+                bccPending: "12500",
+                penalPending: "6800",
+                disbAmt: "750000",
+                loanAmt: "750000",
+                disbDate: "10/01/2023",
+                emiStartDate: "10/02/2023",
+                emiEndDate: "10/01/2030",
+                emiCycleDate: "10",
+                make: "HYUNDAI",
+                manufacturerDesc: "HYUNDAI MOTOR INDIA LIMITED",
+                regdnum: "OD02CX9876",
+                age: "38",
+                employer: "CIPLA",
+                fatherName: "RAM BAHADUR SINGH",
+                feName: "SUNITA",
+                feMobileNumber: "8888777766",
+                customerNumber: "9988776655",
+                customerAddress: "CHAULIAGANJ, CUTTACK, ODISHA,753004",
+                customerOfficeAddress: "Industrial Area, Cuttack",
+                pinCode: "753004",
+                referenceDetails: "VIJAY MISHRA-8899776655,DEEPAK PRADHAN-8899776656",
+                collectionManagerName: "BIJAY KUMAR DAS",
+                financeCompanyName: "ICICI BANK"
+            },
+            {
+                sl: 4,
+                agreementId: "119876543",
+                customerName: "SNEHA PATEL",
+                prod: "TW",
+                tcName: "ROHIT",
+                branch: "KHANDAGIRI",
+                countOfCases: 1,
+                oldNew: "NEW",
+                bucket: 1,
+                mode: "RF",
+                npaStatus: "STD",
+                pos: "125670.50",
+                emiAmt: "4500",
+                emiDueAmount: "4500",
+                totalCharges: "4850",
+                receiptAmount: "4500",
+                receiptDate: "20/12/2025",
+                bccPending: "2100",
+                penalPending: "950",
+                disbAmt: "145000",
+                loanAmt: "145000",
+                disbDate: "05/09/2024",
+                emiStartDate: "05/10/2024",
+                emiEndDate: "05/09/2027",
+                emiCycleDate: "5",
+                make: "HONDA",
+                manufacturerDesc: "HONDA MOTORCYCLE & SCOOTER INDIA",
+                regdnum: "OD07DK1234",
+                age: "26",
+                employer: "TCS",
+                fatherName: "RAMESH PATEL",
+                feName: "NEHA",
+                feMobileNumber: "7777888899",
+                customerNumber: "9876543221",
+                customerAddress: "KHANDAGIRI, BHUBANESWAR, KHORDA,751030",
+                customerOfficeAddress: "TCS Office, Infocity, Bhubaneswar",
+                pinCode: "751030",
+                referenceDetails: "RAHUL SHARMA-7766554433,POOJA VERMA-7766554434",
+                collectionManagerName: "SANTOSH MOHANTY",
+                financeCompanyName: "BAJAJ FINSERV"
+            },
+            {
+                sl: 5,
+                agreementId: "120123456",
+                customerName: "Rudra Prasad Maharana",
+                prod: "TR",
+                tcName: "KAVITA",
+                branch: "BERHAMPUR",
+                countOfCases: 2,
+                oldNew: "OLD",
+                bucket: 5,
+                mode: "ECS",
+                npaStatus: "SMA2",
+                pos: "892345.80",
+                emiAmt: "25600",
+                emiDueAmount: "51200",
+                totalCharges: "29850",
+                receiptAmount: "25600",
+                receiptDate: "05/12/2025",
+                bccPending: "18900",
+                penalPending: "9500",
+                disbAmt: "1200000",
+                loanAmt: "1200000",
+                disbDate: "22/08/2021",
+                emiStartDate: "22/09/2021",
+                emiEndDate: "22/08/2028",
+                emiCycleDate: "22",
+                make: "ASHOK LEYLAND",
+                manufacturerDesc: "ASHOK LEYLAND LIMITED",
+                regdnum: "OD09EK7890",
+                age: "42",
+                employer: "SELF EMPLOYED",
+                fatherName: "GOPAL NAYAK",
+                feName: "LAXMI",
+                feMobileNumber: "9999888877",
+                customerNumber: "8877665544",
+                customerAddress: "GANDHI NAGAR, BERHAMPUR, GANJAM,760001",
+                customerOfficeAddress: "Market Complex, Berhampur",
+                pinCode: "760001",
+                referenceDetails: "SUBASH PATRA-9988776644,SANJAY RATH-9988776645",
+                collectionManagerName: "PRADIP KUMAR SWAIN",
+                financeCompanyName: "KOTAK MAHINDRA BANK"
+            },
+            {
+                sl: 6,
+                agreementId: "120456789",
+                customerName: "ANJALI REDDY",
+                prod: "PV",
+                tcName: "DEEPAK",
+                branch: "NAYAPALLI",
+                countOfCases: 1,
+                oldNew: "NEW",
+                bucket: 2,
+                mode: "RF",
+                npaStatus: "GCL",
+                pos: "456780.90",
+                emiAmt: "16200",
+                emiDueAmount: "32400",
+                totalCharges: "18650",
+                receiptAmount: "16200",
+                receiptDate: "12/12/2025",
+                bccPending: "9800",
+                penalPending: "5200",
+                disbAmt: "580000",
+                loanAmt: "580000",
+                disbDate: "18/11/2023",
+                emiStartDate: "18/12/2023",
+                emiEndDate: "18/11/2030",
+                emiCycleDate: "18",
+                make: "MARUTI SUZUKI",
+                manufacturerDesc: "MARUTI SUZUKI INDIA LIMITED",
+                regdnum: "OD06FK2345",
+                age: "31",
+                employer: "WIPRO",
+                fatherName: "VENKAT REDDY",
+                feName: "PRIYA",
+                feMobileNumber: "8888999900",
+                customerNumber: "9876501234",
+                customerAddress: "NAYAPALLI, BHUBANESWAR, KHORDA,751012",
+                customerOfficeAddress: "Wipro Campus, Infovalley, Bhubaneswar",
+                pinCode: "751012",
+                referenceDetails: "ARUN KUMAR-8877665511,MADHAVI RAO-8877665512",
+                collectionManagerName: "RAMESH KUMAR JENA",
+                financeCompanyName: "AXIS BANK"
+            },
+            {
+                sl: 7,
+                agreementId: "120789012",
+                customerName: "VIKRAM CHOUDHURY",
+                prod: "CV",
+                tcName: "ANITA",
+                branch: "SAMBALPUR",
+                countOfCases: 4,
+                oldNew: "OLD",
+                bucket: 6,
+                mode: "CH",
+                npaStatus: "NPA",
+                pos: "1234567.45",
+                emiAmt: "32500",
+                emiDueAmount: "97500",
+                totalCharges: "42850",
+                receiptAmount: "32500",
+                receiptDate: "02/12/2025",
+                bccPending: "28500",
+                penalPending: "14200",
+                disbAmt: "1800000",
+                loanAmt: "1800000",
+                disbDate: "30/06/2020",
+                emiStartDate: "30/07/2020",
+                emiEndDate: "30/06/2027",
+                emiCycleDate: "30",
+                make: "EICHER",
+                manufacturerDesc: "EICHER MOTORS LIMITED",
+                regdnum: "OD12GK4567",
+                age: "45",
+                employer: "SELF EMPLOYED",
+                fatherName: "BHARAT CHOUDHURY",
+                feName: "SARITA",
+                feMobileNumber: "7777666655",
+                customerNumber: "9988772233",
+                customerAddress: "AINTHAPALI, SAMBALPUR, ODISHA,768004",
+                customerOfficeAddress: "Transport Nagar, Sambalpur",
+                pinCode: "768004",
+                referenceDetails: "MANOJ BEHERA-9876543298,PRASANT SAHU-9876543299",
+                collectionManagerName: "DEBASIS PRADHAN",
+                financeCompanyName: "SBI"
+            },
+            {
+                sl: 8,
+                agreementId: "121234567",
+                customerName: "MEENA AGARWAL",
+                prod: "TW",
+                tcName: "SURESH",
+                branch: "JANPATH",
+                countOfCases: 1,
+                oldNew: "NEW",
+                bucket: 1,
+                mode: "ECS",
+                npaStatus: "STD",
+                pos: "98765.30",
+                emiAmt: "3800",
+                emiDueAmount: "3800",
+                totalCharges: "4150",
+                receiptAmount: "3800",
+                receiptDate: "18/12/2025",
+                bccPending: "1850",
+                penalPending: "750",
+                disbAmt: "115000",
+                loanAmt: "115000",
+                disbDate: "12/10/2024",
+                emiStartDate: "12/11/2024",
+                emiEndDate: "12/10/2027",
+                emiCycleDate: "12",
+                make: "TVS",
+                manufacturerDesc: "TVS MOTOR COMPANY LIMITED",
+                regdnum: "OD03HK5678",
+                age: "28",
+                employer: "MINDTREE",
+                fatherName: "SUNIL AGARWAL",
+                feName: "REKHA",
+                feMobileNumber: "9999777788",
+                customerNumber: "8877664455",
+                customerAddress: "JANPATH, BHUBANESWAR, KHORDA,751022",
+                customerOfficeAddress: "Mindtree Office, Chandrasekharpur",
+                pinCode: "751022",
+                referenceDetails: "AMIT GUPTA-9876501111,NEELAM SINGH-9876501112",
+                collectionManagerName: "SRIKANT PATTNAIK",
+                financeCompanyName: "IDFC FIRST BANK"
+            },
+            {
+                sl: 9,
+                agreementId: "121567890",
+                customerName: "SUNIL MAHAPATRA",
+                prod: "TR",
+                tcName: "RITU",
+                branch: "ROURKELA",
+                countOfCases: 2,
+                oldNew: "NEW",
+                bucket: 3,
+                mode: "RF",
+                npaStatus: "GCL",
+                pos: "678901.20",
+                emiAmt: "22400",
+                emiDueAmount: "44800",
+                totalCharges: "25950",
+                receiptAmount: "22400",
+                receiptDate: "10/12/2025",
+                bccPending: "14500",
+                penalPending: "7800",
+                disbAmt: "950000",
+                loanAmt: "950000",
+                disbDate: "25/05/2023",
+                emiStartDate: "25/06/2023",
+                emiEndDate: "25/05/2029",
+                emiCycleDate: "25",
+                make: "MAHINDRA",
+                manufacturerDesc: "MAHINDRA & MAHINDRA LTD.",
+                regdnum: "OD18JK3456",
+                age: "36",
+                employer: "SAIL",
+                fatherName: "KRUSHNA MAHAPATRA",
+                feName: "PUJA",
+                feMobileNumber: "8888666677",
+                customerNumber: "9988771122",
+                customerAddress: "CIVIL TOWNSHIP, ROURKELA, SUNDARGARH,769004",
+                customerOfficeAddress: "SAIL Plant, Rourkela",
+                pinCode: "769004",
+                referenceDetails: "BISWAJIT SAHOO-9876509876,SANTOSH KUMAR-9876509877",
+                collectionManagerName: "ASHOK KUMAR SAHU",
+                financeCompanyName: "HDFC BANK"
+            },
+            {
+                sl: 10,
+                agreementId: "121890123",
+                customerName: "KAVITA DESHMUKH",
+                prod: "PV",
+                tcName: "NITIN",
+                branch: "CHANDRASEKHARPUR",
+                countOfCases: 1,
+                oldNew: "OLD",
+                bucket: 2,
+                mode: "ECS",
+                npaStatus: "STD",
+                pos: "345678.60",
+                emiAmt: "13500",
+                emiDueAmount: "27000",
+                totalCharges: "15250",
+                receiptAmount: "13500",
+                receiptDate: "14/12/2025",
+                bccPending: "7900",
+                penalPending: "4100",
+                disbAmt: "425000",
+                loanAmt: "425000",
+                disbDate: "08/03/2023",
+                emiStartDate: "08/04/2023",
+                emiEndDate: "08/03/2028",
+                emiCycleDate: "8",
+                make: "KIA",
+                manufacturerDesc: "KIA MOTORS INDIA",
+                regdnum: "OD04KK6789",
+                age: "34",
+                employer: "COGNIZANT",
+                fatherName: "MOHAN DESHMUKH",
+                feName: "SONAL",
+                feMobileNumber: "7777555566",
+                customerNumber: "9876512345",
+                customerAddress: "CHANDRASEKHARPUR, BHUBANESWAR, KHORDA,751016",
+                customerOfficeAddress: "Cognizant Office, Infocity, Bhubaneswar",
+                pinCode: "751016",
+                referenceDetails: "PRAKASH JOSHI-8877669988,SEEMA RATHI-8877669989",
+                collectionManagerName: "NIGAM CHANDRA SETHI",
+                financeCompanyName: "ICICI BANK"
+            },
+            {
+                sl: 11,
+                agreementId: "122123456",
+                customerName: "DINESH TRIPATHI",
+                prod: "CV",
+                tcName: "POOJA",
+                branch: "BALASORE",
+                countOfCases: 3,
+                oldNew: "NEW",
+                bucket: 4,
+                mode: "CH",
+                npaStatus: "SMA1",
+                pos: "987654.75",
+                emiAmt: "28700",
+                emiDueAmount: "57400",
+                totalCharges: "33450",
+                receiptAmount: "28700",
+                receiptDate: "06/12/2025",
+                bccPending: "19500",
+                penalPending: "10200",
+                disbAmt: "1350000",
+                loanAmt: "1350000",
+                disbDate: "14/07/2022",
+                emiStartDate: "14/08/2022",
+                emiEndDate: "14/07/2028",
+                emiCycleDate: "14",
+                make: "TATA",
+                manufacturerDesc: "TATA MOTORS LIMITED",
+                regdnum: "OD15LK8901",
+                age: "40",
+                employer: "SELF EMPLOYED",
+                fatherName: "RAGHUNATH TRIPATHI",
+                feName: "KAVITA",
+                feMobileNumber: "9999666677",
+                customerNumber: "9988773344",
+                customerAddress: "SAHADEVKHUNTA, BALASORE, ODISHA,756001",
+                customerOfficeAddress: "Industrial Estate, Balasore",
+                pinCode: "756001",
+                referenceDetails: "BIPIN MOHANTY-9876547890,KISHORE PANDA-9876547891",
+                collectionManagerName: "JAGANNATH SAHOO",
+                financeCompanyName: "KOTAK MAHINDRA BANK"
+            },
+            {
+                sl: 12,
+                agreementId: "122456789",
+                customerName: "REKHA BANERJEE",
+                prod: "TW",
+                tcName: "ANIL",
+                branch: "SAHEED NAGAR",
+                countOfCases: 1,
+                oldNew: "NEW",
+                bucket: 1,
+                mode: "RF",
+                npaStatus: "STD",
+                pos: "87654.40",
+                emiAmt: "3200",
+                emiDueAmount: "3200",
+                totalCharges: "3550",
+                receiptAmount: "3200",
+                receiptDate: "22/12/2025",
+                bccPending: "1500",
+                penalPending: "650",
+                disbAmt: "98000",
+                loanAmt: "98000",
+                disbDate: "18/11/2024",
+                emiStartDate: "18/12/2024",
+                emiEndDate: "18/11/2027",
+                emiCycleDate: "18",
+                make: "HERO",
+                manufacturerDesc: "HERO MOTOCORP LIMITED",
+                regdnum: "OD01MK2345",
+                age: "25",
+                employer: "ACCENTURE",
+                fatherName: "SUBIR BANERJEE",
+                feName: "PRIYA",
+                feMobileNumber: "8888555566",
+                customerNumber: "9876523456",
+                customerAddress: "SAHEED NAGAR, BHUBANESWAR, KHORDA,751007",
+                customerOfficeAddress: "Accenture Office, Infovalley, Bhubaneswar",
+                pinCode: "751007",
+                referenceDetails: "ARJUN DAS-9988775566,SWATI MISHRA-9988775567",
+                collectionManagerName: "BISWAJIT MOHANTY",
+                financeCompanyName: "BAJAJ FINSERV"
+            },
+            {
+                sl: 13,
+                agreementId: "122789012",
+                customerName: "ARUN SINHA",
+                prod: "TR",
+                tcName: "SUNITA",
+                branch: "PURI",
+                countOfCases: 2,
+                oldNew: "OLD",
+                bucket: 5,
+                mode: "ECS",
+                npaStatus: "SMA2",
+                pos: "765432.85",
+                emiAmt: "24200",
+                emiDueAmount: "48400",
+                totalCharges: "28150",
+                receiptAmount: "24200",
+                receiptDate: "04/12/2025",
+                bccPending: "16800",
+                penalPending: "8900",
+                disbAmt: "1080000",
+                loanAmt: "1080000",
+                disbDate: "20/09/2021",
+                emiStartDate: "20/10/2021",
+                emiEndDate: "20/09/2028",
+                emiCycleDate: "20",
+                make: "MAHINDRA",
+                manufacturerDesc: "MAHINDRA & MAHINDRA LTD.",
+                regdnum: "OD10NK4567",
+                age: "43",
+                employer: "GOVERNMENT",
+                fatherName: "RAMESH SINHA",
+                feName: "ASHA",
+                feMobileNumber: "7777444455",
+                customerNumber: "9988774455",
+                customerAddress: "GRAND ROAD, PURI, ODISHA,752001",
+                customerOfficeAddress: "District Office, Puri",
+                pinCode: "752001",
+                referenceDetails: "PRAMOD JENA-9876556677,KAMALA PATRA-9876556678",
+                collectionManagerName: "PRASANNA KUMAR NAYAK",
+                financeCompanyName: "AXIS BANK"
+            },
+            {
+                sl: 14,
+                agreementId: "123012345",
+                customerName: "NEELAM VERMA",
+                prod: "PV",
+                tcName: "RAJESH",
+                branch: "BARAMUNDA",
+                countOfCases: 1,
+                oldNew: "NEW",
+                bucket: 2,
+                mode: "RF",
+                npaStatus: "GCL",
+                pos: "523456.30",
+                emiAmt: "19800",
+                emiDueAmount: "39600",
+                totalCharges: "22550",
+                receiptAmount: "19800",
+                receiptDate: "16/12/2025",
+                bccPending: "11200",
+                penalPending: "5900",
+                disbAmt: "680000",
+                loanAmt: "680000",
+                disbDate: "02/02/2024",
+                emiStartDate: "02/03/2024",
+                emiEndDate: "02/02/2031",
+                emiCycleDate: "2",
+                make: "TOYOTA",
+                manufacturerDesc: "TOYOTA KIRLOSKAR MOTOR",
+                regdnum: "OD08OK6789",
+                age: "32",
+                employer: "TECH MAHINDRA",
+                fatherName: "HARI PRASAD VERMA",
+                feName: "ANJALI",
+                feMobileNumber: "9999555544",
+                customerNumber: "9876534567",
+                customerAddress: "BARAMUNDA, BHUBANESWAR, KHORDA,751003",
+                customerOfficeAddress: "Tech Mahindra Campus, Infocity",
+                pinCode: "751003",
+                referenceDetails: "MANISH KUMAR-9988776611,SHALINI SINGH-9988776612",
+                collectionManagerName: "SANJAY KUMAR BISWAL",
+                financeCompanyName: "HDFC BANK"
+            },
+            {
+                sl: 15,
+                agreementId: "123345678",
+                customerName: "MANOJ KUMAR DASH",
+                prod: "CV",
+                tcName: "RADHA",
+                branch: "ANGUL",
+                countOfCases: 3,
+                oldNew: "OLD",
+                bucket: 6,
+                mode: "CH",
+                npaStatus: "NPA",
+                pos: "1456789.50",
+                emiAmt: "35600",
+                emiDueAmount: "106800",
+                totalCharges: "46850",
+                receiptAmount: "35600",
+                receiptDate: "01/12/2025",
+                bccPending: "32500",
+                penalPending: "16200",
+                disbAmt: "2100000",
+                loanAmt: "2100000",
+                disbDate: "15/04/2020",
+                emiStartDate: "15/05/2020",
+                emiEndDate: "15/04/2027",
+                emiCycleDate: "15",
+                make: "ASHOK LEYLAND",
+                manufacturerDesc: "ASHOK LEYLAND LIMITED",
+                regdnum: "OD20PK9012",
+                age: "47",
+                employer: "SELF EMPLOYED",
+                fatherName: "BISWANATH DASH",
+                feName: "MANJULA",
+                feMobileNumber: "8888444433",
+                customerNumber: "9988775566",
+                customerAddress: "NALCO NAGAR, ANGUL, ODISHA,759145",
+                customerOfficeAddress: "Truck Stand, Angul",
+                pinCode: "759145",
+                referenceDetails: "BIJAY PRADHAN-9876565432,GOPAL SAHU-9876565433",
+                collectionManagerName: "LAXMIDHAR BEHERA",
+                financeCompanyName: "SBI"
+            }
+        ];
+
+        const columnMapping = {
+            "Sl": "sl",
+            "Agreement ID": "agreementId",
+            "Customer Name": "customerName",
+            "Product": "prod",
+            "TC Name": "tcName",
+            "Branch": "branch",
+            "Count of Cases": "countOfCases",
+            "Old/New": "oldNew",
+            "Bucket": "bucket",
+            "Mode": "mode",
+            "NPA Status": "npaStatus",
+            "POS": "pos",
+            "EMI Amount": "emiAmt",
+            "EMI Due Amount": "emiDueAmount",
+            "Total Charges": "totalCharges",
+            "Receipt Amount": "receiptAmount",
+            "Receipt Date": "receiptDate",
+            "BCC Pending": "bccPending",
+            "Penal Pending": "penalPending",
+            "Disbursement Amount": "disbAmt",
+            "Loan Amount": "loanAmt",
+            "Disbursement Date": "disbDate",
+            "EMI Start Date": "emiStartDate",
+            "EMI End Date": "emiEndDate",
+            "EMI Cycle Date": "emiCycleDate",
+            "Make": "make",
+            "Manufacturer Description": "manufacturerDesc",
+            "Registration Number": "regdnum",
+            "Age": "age",
+            "Employer": "employer",
+            "Father Name": "fatherName",
+            "FE Name": "feName",
+            "FE Mobile Number": "feMobileNumber",
+            "Customer Number": "customerNumber",
+            "Customer Address": "customerAddress",
+            "Customer Office Address": "customerOfficeAddress",
+            "PIN Code": "pinCode",
+            "Reference Details": "referenceDetails",
+            "Collection Manager Name": "collectionManagerName",
+            "Finance Company Name": "financeCompanyName"
+        };
+
+        const fieldLabels = {
+            "sl": "Serial No.",
+            "agreementId": "Agreement ID",
+            "customerName": "Customer Name",
+            "prod": "Product",
+            "tcName": "TC Name",
+            "branch": "Branch",
+            "countOfCases": "Count of Cases",
+            "oldNew": "Old/New",
+            "bucket": "Bucket",
+            "mode": "Mode",
+            "npaStatus": "NPA Status",
+            "pos": "POS",
+            "emiAmt": "EMI Amount",
+            "emiDueAmount": "EMI Due Amount",
+            "totalCharges": "Total Charges",
+            "receiptAmount": "Receipt Amount",
+            "receiptDate": "Receipt Date",
+            "bccPending": "BCC Pending",
+            "penalPending": "Penal Pending",
+            "disbAmt": "Disbursement Amount",
+            "loanAmt": "Loan Amount",
+            "disbDate": "Disbursement Date",
+            "emiStartDate": "EMI Start Date",
+            "emiEndDate": "EMI End Date",
+            "emiCycleDate": "EMI Cycle Date",
+            "make": "Make",
+            "manufacturerDesc": "Manufacturer Description",
+            "regdnum": "Registration Number",
+            "age": "Age",
+            "employer": "Employer",
+            "fatherName": "Father Name",
+            "feName": "FE Name",
+            "feMobileNumber": "FE Mobile Number",
+            "customerNumber": "Customer Number",
+            "customerAddress": "Customer Address",
+            "customerOfficeAddress": "Customer Office Address",
+            "pinCode": "PIN Code",
+            "referenceDetails": "Reference Details",
+            "collectionManagerName": "Collection Manager Name",
+            "financeCompanyName": "Finance Company Name"
+        };
+
+        let filteredTasks = [...tasks];
+        let currentTask = null;
+
+        function initializeFilters() {
+            const columnSelect = document.getElementById('columnSelect');
+
+            Object.keys(columnMapping).forEach(displayName => {
+                const option = document.createElement('option');
+                option.value = displayName;
+                option.textContent = displayName;
+                columnSelect.appendChild(option);
+            });
+
+            columnSelect.addEventListener('change', onColumnChange);
+            document.getElementById('valueSelect').addEventListener('change', onValueChange);
+        }
+
+        function onColumnChange(e) {
+            const selectedColumn = e.target.value;
+            const valueSelect = document.getElementById('valueSelect');
+
+            valueSelect.innerHTML = '<option value="">-- Select Value --</option>';
+
+            if (!selectedColumn) {
+                valueSelect.disabled = true;
+                return;
+            }
+
+            valueSelect.disabled = false;
+
+            const fieldKey = columnMapping[selectedColumn];
+            const uniqueValues = [...new Set(tasks.map(task => task[fieldKey]))].sort();
+
+            uniqueValues.forEach(value => {
+                const option = document.createElement('option');
+                option.value = value;
+                option.textContent = value;
+                valueSelect.appendChild(option);
+            });
+        }
+
+        function onValueChange(e) {
+            const selectedColumn = document.getElementById('columnSelect').value;
+            const selectedValue = e.target.value;
+
+            if (!selectedColumn || !selectedValue) {
+                filteredTasks = [...tasks];
+            } else {
+                const fieldKey = columnMapping[selectedColumn];
+                filteredTasks = tasks.filter(task => task[fieldKey] == selectedValue);
+            }
+
+            renderTable();
+        }
+
+        function resetFilters() {
+            document.getElementById('columnSelect').value = '';
+            document.getElementById('valueSelect').innerHTML = '<option value="">-- Select Value --</option>';
+            document.getElementById('valueSelect').disabled = true;
+            filteredTasks = [...tasks];
+            renderTable();
+        }
+
+        function populateRowDetails(task) {
+            const detailsGrid = document.getElementById('rowDetailsGrid');
+            detailsGrid.innerHTML = '';
+
+            // Create detail items for all fields
+            Object.keys(task).forEach(key => {
+                const detailItem = document.createElement('div');
+                detailItem.className = 'detail-item';
+
+                const label = document.createElement('div');
+                label.className = 'detail-label';
+                label.textContent = fieldLabels[key] || key;
+
+                const value = document.createElement('div');
+                value.className = 'detail-value';
+                value.textContent = task[key] || '-';
+
+                detailItem.appendChild(label);
+                detailItem.appendChild(value);
+                detailsGrid.appendChild(detailItem);
+            });
+        }
+
+        function openModal(task) {
+            currentTask = task;
+            populateRowDetails(task);
+            document.getElementById('detailModal').style.display = 'block';
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeModal() {
+            document.getElementById('detailModal').style.display = 'none';
+            document.body.style.overflow = 'auto';
+            document.getElementById('detailForm').reset();
+        }
+
+        function saveDetails() {
+            const formData = {
+                agreementId: currentTask.agreementId,
+                customerName: currentTask.customerName,
+                code: document.getElementById('code').value,
+                newMobileNumber: document.getElementById('newMobileNumber').value,
+                projection: document.getElementById('projection').value,
+                promiseDate: document.getElementById('promiseDate').value,
+                promiseAmount: document.getElementById('promiseAmount').value,
+                customerRemarks: document.getElementById('customerRemarks').value,
+                referenceRemarks: document.getElementById('referenceRemarks').value,
+                needGroupVisit: document.getElementById('needGroupVisit').value,
+                projectionExtended: document.getElementById('projectionExtended').value,
+                visitStatus: document.getElementById('visitStatus').value,
+                customerAvailable: document.getElementById('customerAvailable').value,
+                vehicleAvailable: document.getElementById('vehicleAvailable').value,
+                thirdPartyStatus: document.getElementById('thirdPartyStatus').value,
+                thirdPartyDetails: document.getElementById('thirdPartyDetails').value,
+                newUpdateAddress: document.getElementById('newUpdateAddress').value,
+                status: document.getElementById('status').value,
+                payment: document.getElementById('payment').value,
+                paymentMode: document.getElementById('paymentMode').value,
+                paymentAmount: document.getElementById('paymentAmount').value,
+                paymentDate: document.getElementById('paymentDate').value
+            };
+
+            console.log('Form Data:', formData);
+
+            alert('Details saved successfully for Agreement ID: ' + currentTask.agreementId);
+            closeModal();
+        }
+
+        window.onclick = function (event) {
+            const modal = document.getElementById('detailModal');
+            if (event.target == modal) {
+                closeModal();
+            }
+        }
+
+        function renderTable() {
+            const tbody = document.getElementById("table-body");
+            tbody.innerHTML = '';
+
+            if (filteredTasks.length === 0) {
+                tbody.innerHTML = '<tr><td colspan="41" class="no-results">No results found</td></tr>';
+                return;
+            }
+
+            filteredTasks.forEach((task, index) => {
+                const row = document.createElement('tr');
+                row.onclick = function () { openModal(task); };
+
+                row.innerHTML = `
+                    <td>${task.sl}</td>
+                    <td>${task.agreementId}</td>
+                    <td>${task.customerName}</td>
+                    <td>${task.prod}</td>
+                    <td>${task.tcName}</td>
+                    <td>${task.branch}</td>
+                    <td>${task.countOfCases}</td>
+                    <td>${task.oldNew}</td>
+                    <td>${task.bucket}</td>
+                    <td>${task.mode}</td>
+                    <td>${task.npaStatus}</td>
+                    <td>${task.pos}</td>
+                    <td>${task.emiAmt}</td>
+                    <td>${task.emiDueAmount}</td>
+                    <td>${task.totalCharges}</td>
+                    <td>${task.receiptAmount}</td>
+                    <td>${task.receiptDate}</td>
+                    <td>${task.bccPending}</td>
+                    <td>${task.penalPending}</td>
+                    <td>${task.disbAmt}</td>
+                    <td>${task.loanAmt}</td>
+                    <td>${task.disbDate}</td>
+                    <td>${task.emiStartDate}</td>
+                    <td>${task.emiEndDate}</td>
+                    <td>${task.emiCycleDate}</td>
+                    <td>${task.make}</td>
+                    <td>${task.manufacturerDesc}</td>
+                    <td>${task.regdnum}</td>
+                    <td>${task.age}</td>
+                    <td>${task.employer}</td>
+                    <td>${task.fatherName}</td>
+                    <td>${task.feName}</td>
+                    <td>${task.feMobileNumber}</td>
+                    <td>${task.customerNumber}</td>
+                    <td>${task.customerAddress}</td>
+                    <td>${task.customerOfficeAddress}</td>
+                    <td>${task.pinCode}</td>
+                    <td>${task.referenceDetails}</td>
+                    <td>${task.collectionManagerName}</td>
+                    <td>${task.financeCompanyName}</td>
+                    <td>
+                        <button class="btn btn-primary" onclick="event.stopPropagation(); openModal(tasks[${index}])">View</button>
+                    </td>
+                `;
+                tbody.appendChild(row);
+            });
+        }
+
+        initializeFilters();
+        renderTable();
+
+
+
+
+
+
+
+    </script>
+
+    <!-- <script>
+    document.querySelector(".sweet-26").onclick = function () {
+        (async () => {
+          const { value: fruit } = await Swal.fire({
+            title: 'Select field validation',
+            input: 'select',
+            inputOptions: {
+              'Fruits': {
+                apples: 'Apples',
+                bananas: 'Bananas',
+                grapes: 'Grapes',
+                oranges: 'Oranges'
+              },
+              'Vegetables': {
+                potato: 'Potato',
+                broccoli: 'Broccoli',
+                carrot: 'Carrot'
+              },
+              'icecream': 'Ice cream'
+            },
+            inputPlaceholder: 'Select a fruit',
+            showCancelButton: true,
+            inputValidator: (value) => {
+              return new Promise((resolve) => {
+                if (value === 'oranges') {
+                  resolve()
+                } else {
+                  resolve('You need to select oranges :)')
+                }
+              })
+            }
+          })
+          if (fruit) {
+            Swal.fire(`You selected: ${fruit}`)
+          }
+          })()
+      };
+  </script> -->
+
+
+
+</body>
+
+</html>
